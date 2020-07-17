@@ -30,7 +30,10 @@ func main() {
 	if len(os.Args[1:]) > 0 {
 		for _, a := range os.Args[1:] {
 			/* 	TODO : Not sure if there is a better method in regexp so don't need multiple vars
-			 */
+
+			TODO : Since there are only the 5 commands that should be called, this could be changed
+			to just check for os.Args[1] and compare equality (ignore case)
+			*/
 			matchDisable, _ := regexp.MatchString("^([-/]*)(disable)", a)
 			matchUninstall, _ := regexp.MatchString("^([-/]*)(uninstall)", a)
 			matchInstall, _ := regexp.MatchString("^([-/]*)(install)", a)
